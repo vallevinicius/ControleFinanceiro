@@ -1,88 +1,83 @@
-# Your Money, Your life
+# Your Money, Your Life
 
-![Status do Projeto](https://img.shields.io/badge/status-concluído-brightgreen)
-![Licença](https://img.shields.io/badge/licença-MIT-blue)
+![Project Status](https://img.shields.io/badge/status-completed-brightgreen)
+![License](https://img.shields.io/badge/license-MIT-blue)
 
-Uma aplicação web moderna e responsiva para análise e controle financeiro pessoal, construída com JavaScript puro e integrada com os serviços do Firebase. Permite que os usuários gerenciem suas receitas e despesas de forma intuitiva, com dashboards visuais e detalhados.
+A modern and responsive web application for personal financial analysis and control, built with pure JavaScript and integrated with Firebase services. It allows users to manage their income and expenses intuitively, featuring visual and detailed dashboards.
 
 ---
 
-## ✨ Funcionalidades Principais
+## Main Features
 
-* **Autenticação Segura:** Sistema completo de Login, Cadastro, Recuperação de Senha e opção de "Ver Senha".
-* **Persistência de Dados na Nuvem:** Todas as transações são salvas de forma segura na conta de cada usuário usando o Firestore, permitindo acesso de múltiplos dispositivos (celular, computador, etc.).
-* **Sidebar Navegável:** Um menu lateral profissional e expansível para navegar entre as diferentes seções da aplicação.
-* **Dashboard Completo:** Visão geral das finanças com saldo, histórico de transações e formulário para novos lançamentos.
-* **Análise por Período:** Alterne facilmente entre a visão **Mensal** e **Anual** dos seus dados em todos os dashboards.
-* **Dashboards de Categoria:** Telas dedicadas para cada categoria de receita e despesa, com gráficos e históricos específicos.
-* **Gráficos Interativos:** Visualize seus dados com múltiplos tipos de gráficos, incluindo Colunas, Barras, Linha e Pizza.
-* **Design Responsivo:** Interface totalmente adaptável para uma experiência perfeita tanto em desktops quanto em dispositivos móveis.
-* **Interface Moderna:** Design limpo e intuitivo com modais personalizados para confirmações e interações, evitando o uso de alertas padrão do navegador.
+* **Secure Authentication:** Complete Login, Signup, Password Recovery, and "Show Password" option.
+* **Cloud Data Persistence:** All transactions are securely saved to each user's account using Firestore, allowing access from multiple devices (mobile, computer, etc.).
+* **Navigable Sidebar:** A professional and expandable sidebar menu to navigate between different sections of the application.
+* **Complete Dashboard:** Financial overview with balance, transaction history, and form for new entries.
+* **Period Analysis:** Easily switch between **Monthly** and **Yearly** views of your data across all dashboards.
+* **Category Dashboards:** Dedicated screens for each income and expense category, with specific charts and histories.
+* **Interactive Charts:** Visualize your data with multiple chart types, including Column, Bar, Line, and Pie charts.
+* **Responsive Design:** Fully adaptable interface for a seamless experience on both desktops and mobile devices.
+* **Modern Interface:** Clean and intuitive design with custom modals for confirmations and interactions, avoiding standard browser alerts.
 
-## 🚀 Tecnologias Utilizadas
+## Technologies Used
 
 * **Frontend:** HTML5, CSS3, JavaScript (ES6 Modules)
-* **Backend & Banco de Dados:** Google Firebase
-    * **Firebase Authentication:** Para gerenciamento de usuários.
-    * **Firestore Database:** Para armazenamento de dados em tempo real.
-    * **Firebase Hosting:** Para publicação e hospedagem do projeto.
-* **Gráficos:** [Chart.js](https://www.chartjs.org/)
-* **Ícones:** [Font Awesome](https://fontawesome.com/)
+* **Backend & Database:** Google Firebase
+    * **Firebase Authentication:** For user management.
+    * **Firestore Database:** For real-time data storage.
+    * **Firebase Hosting:** For project deployment and hosting.
+* **Charts:** [Chart.js](https://www.chartjs.org/)
+* **Icons:** [Font Awesome](https://fontawesome.com/)
 
-## 🏁 Como Começar
+## Getting Started
 
-Para rodar este projeto localmente, siga os passos abaixo.
+To run this project locally, follow the steps below.
 
-### Pré-requisitos
+### Prerequisites
 
-* Você precisa ter o [Node.js](https://nodejs.org/) instalado para usar o `npm`.
-* Você precisa ter o [Firebase Tools](https://firebase.google.com/docs/cli) instalado globalmente:
+* You need to have [Node.js](https://nodejs.org/) installed to use `npm`.
+* You need to have [Firebase Tools](https://firebase.google.com/docs/cli) installed globally:
     ```bash
     npm install -g firebase-tools
     ```
 
-### Instalação e Configuração
+### Installation and Configuration
 
-1.  **Clone o repositório:**
+1. **Clone the repository:**
     ```bash
-    git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
-    cd seu-repositorio
+    git clone [https://github.com/your-username/your-repository.git](https://github.com/your-username/your-repository.git)
+    cd your-repository
     ```
 
-2.  **Crie e configure seu projeto no Firebase:**
-    * Crie um novo projeto no Console do Firebase.
-    * Ative os serviços de **Authentication** (com o provedor "Email/Senha") e **Firestore Database**.
-    * Ao criar o Firestore, inicie no **Modo de Produção** e escolha a localização mais próxima (ex: `southamerica-east1`).
-    * Na aba **Regras** do Firestore, cole as regras de segurança para permitir que apenas usuários logados acessem seus próprios dados.
-    * Copie o objeto de configuração `firebaseConfig` das "Configurações do Projeto" e cole no topo do arquivo `main.js`.
+2. **Create and configure your Firebase project:**
+    * Create a new project in the Firebase Console.
+    * Enable **Authentication** services (with the "Email/Password" provider) and **Firestore Database**.
+    * When creating Firestore, start in **Production Mode** and choose the closest location (e.g., `southamerica-east1`).
+    * In the **Rules** tab of Firestore, paste security rules to allow only logged-in users to access their own data.
+    * Copy the `firebaseConfig` object from "Project Settings" and paste it at the top of the `main.js` file.
 
-3.  **Crie os Índices do Firestore:**
-    * Rode a aplicação localmente.
-    * Abra o **Console** do navegador (F12).
-    * Navegue pelos dashboards. O console mostrará erros com links para a criação automática dos **índices** necessários. Clique nesses links e crie os índices no Firebase.
+3. **Create Firestore Indexes:**
+    * Run the application locally.
+    * Open the browser **Console** (F12).
+    * Navigate through the dashboards. The console will show errors with links for the automatic creation of the necessary **indexes**. Click those links and create the indexes in Firebase.
 
-4.  **Rode o projeto localmente:**
-    * A maneira mais simples é usar uma extensão do VS Code como a **"Live Server"**. Clique com o botão direito no seu arquivo `index.html` e selecione "Open with Live Server".
+4. **Run the project locally:**
+    * The simplest way is to use a VS Code extension like **"Live Server"**. Right-click your `index.html` file and select "Open with Live Server".
 
-5.  **Para publicar o projeto:**
+5. **To deploy the project:**
     ```bash
     firebase deploy
     ```
 
-## 📂 Estrutura do Projeto
+## Project Structure
 
-
+```text
 /
 ├── public/
-│   ├── index.html      # Estrutura principal da página
-│   ├── style.css       # Folha de estilos principal
-│   └── main.js         # Lógica principal da aplicação
-├── firestore.rules     # Regras de segurança do banco de dados
-├── firestore.indexes.json # Definições de índices do banco de dados
-├── firebase.json       # Configurações do projeto Firebase
-└── README.md           # Este arquivo
-
-
-## 📜 Licença
-
-Distribuído sob a Licença MIT.
+│   ├── index.html       # Main page structure
+│   ├── style.css        # Main stylesheet
+│   └── main.js          # Main application logic
+├── firestore.rules      # Database security rules
+├── firestore.indexes.json # Database index definitions
+├── firebase.json        # Firebase project configurations
+└── README.md            # This file
